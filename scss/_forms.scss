@@ -1,0 +1,28 @@
+button,
+input {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+}
+.form-container {
+  // justify-content: center;
+  text-align: center;
+}
+
+form * {
+  font-size: 1.5rem;
+  justify-content: center;
+}
+.new-item-input,
+.checkbox {
+  background-color: white;
+  border-radius: 10rem;
+  ///CHECK HOW TO CHANGE CHECKBOXES BECAUSE THIS DOESNT CHANGE THEIR BORDER RADIUS OR REMOVE BORDER
+}
+
+.add-btn {
+  font-family: $subtitle-font;
+  color: $text-color-light;
+}

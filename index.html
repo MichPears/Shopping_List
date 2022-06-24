@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fonts -->
+    <!-- title -->
+    <!-- pacifico -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    /> -->
+    <!-- leckerli -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- subtitle -->
+    <!-- Quicksand -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Raleway:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    /> -->
+    <!-- barlow -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- list -->
+    <!-- raleway -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    /> -->
+    <!-- anek -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icons -->
+    <!-- sun -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- moon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/RESET.CSS" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>SHOPPING LIST!</title>
+  </head>
+  <body>
+    <div class="position-container">
+      <div class="header-container py-2">
+        <div class="header mx-2">
+          <h1>Shopping List</h1>
+          <button class="day-night-btn btn">
+            <span class="material-symbols-outlined"> light_mode </span>
+          </button>
+        </div>
+      </div>
+      <div class="form-container">
+        <form action="" class="shopping-form py-1">
+          <label for="new-item-input">Add New:</label>
+          <input type="text" name="new-item-input" class="new-item-input" />
+          <input type="submit" class="add-btn" value="Add" />
+        </form>
+      </div>
+      <div class="lists-container px-1">
+        <div class="pending-container my-1">
+          <h2 class="py-1">Pending Items</h2>
+          <ul class="pending-ul">
+            <li class="pending-li">
+              <input type="checkbox" name="check" id="" class="checkbox" />
+              <a href="./item_info.html">bananas</a>
+            </li>
+            <li class="pending-li">
+              <input type="checkbox" name="check" id="" class="checkbox" />
+              <a href="./item_info.html">maybe bananas</a>
+            </li>
+          </ul>
+        </div>
+        <div class="in-cart-container my-1">
+          <h2 class="py-1">Shopping Cart</h2>
+          <ul class="shopping-cart-list">
+            <li class="cart-li">
+              <a href="./item_info.html">not bananas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

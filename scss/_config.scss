@@ -1,0 +1,27 @@
+//NIGHT MODE OR DAY MODE - bg color and text color func - maybe increase text size?
+$title-font: "Leckerli One", cursive;
+$list-font: "Anek Latin", sans-serif;
+$subtitle-font: "Barlow Condensed", sans-serif;
+
+//COLORS
+//light
+$header-color-light: rgb(132, 204, 132);
+$title-color-light: lighten($header-color-light, 30%);
+$bg-color-light: rgb(255, 243, 228);
+$icon-color: $bg-color-light;
+$subtitle-color-light: darken($header-color-light, 40%);
+$text-color-light: darken($bg-color-light, 70%);
+
+//dark
+$header-color-dark: black;
+$bg-color-dark: navy;
+$border-style: 6px dotted rgb(87, 190, 87);
+
+// icons
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  color: $icon-color;
+}
+// <span class="material-symbols-outlined">
+// dark_mode
+// </span> ------this is moon icon

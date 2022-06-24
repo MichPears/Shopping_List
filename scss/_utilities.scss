@@ -1,0 +1,26 @@
+//margins and stuff?
+$space-size: (1, 2);
+
+@each $value in $space-size {
+  .my-#{$value} {
+    margin: #{$value}rem 0;
+  }
+  .mx-#{$value} {
+    margin: 0 #{$value}rem;
+  }
+  .py-#{$value} {
+    padding: #{$value}rem 0;
+  }
+  .px-#{$value} {
+    padding: 0 #{$value}rem;
+  }
+}
+li {
+  margin: 0.5rem 0;
+}
+
+.position-container {
+  max-width: 600px;
+  margin: auto;
+  background-color: $bg-color-light;
+}
