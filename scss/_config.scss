@@ -5,17 +5,48 @@ $subtitle-font: "Barlow Condensed", sans-serif;
 
 //COLORS
 //light
-$header-color-light: rgb(132, 204, 132);
+$header-color-light: rgb(107, 207, 107);
 $title-color-light: lighten($header-color-light, 30%);
-$bg-color-light: rgb(255, 243, 228);
-$icon-color: $bg-color-light;
 $subtitle-color-light: darken($header-color-light, 40%);
-$text-color-light: darken($bg-color-light, 70%);
+$btn-focus-color-light: darken($header-color-light, 20%);
+
+$bg-color-light: rgb(255, 243, 228);
+$icon-color-light: $bg-color-light;
+$btn-color-light: darken($bg-color-light, 35%);
+$text-color-light: darken($bg-color-light, 55%);
+$input-color-light: lighten($bg-color-light, 30%);
+$btn-focus-text-light: darken($bg-color-light, 20%);
+$btn-hover-color-light: darken($btn-color-light, 10%);
 
 //dark
-$header-color-dark: black;
-$bg-color-dark: navy;
-$border-style: 6px dotted rgb(87, 190, 87);
+$header-color-dark: rgb(25, 34, 82);
+$title-color-dark: lighten($header-color-dark, 50%);
+$subtitle-color-dark: lighten($header-color-dark, 40%);
+$btn-focus-color-dark: lighten($header-color-dark, 30%);
+
+$bg-color-dark: rgb(23, 16, 41);
+$icon-color-dark: lighten($bg-color-dark, 50%);
+$btn-color-dark: lighten($bg-color-dark, 30%);
+$text-color-dark: lighten($bg-color-dark, 65%);
+$input-color-dark: lighten($bg-color-dark, 10%);
+$btn-focus-text-dark: lighten($bg-color-dark, 60%);
+$btn-hover-color-dark: lighten($bg-color-dark, 40%);
+
+//generic-assignments
+$header-color: $header-color-light;
+$title-color: $title-color-light;
+$subtitle-color: $subtitle-color-light;
+$btn-focus-color: $btn-focus-color-light;
+
+$bg-color: $bg-color-light;
+$icon-color: $icon-color-light;
+$btn-color: $btn-color-light;
+$text-color: $text-color-light;
+$input-color: $input-color-light;
+$btn-focus-text: $btn-focus-text-light;
+$btn-hover-color: $btn-hover-color-light;
+
+$border-style: 6px dotted $header-color;
 
 // icons
 .material-symbols-outlined {

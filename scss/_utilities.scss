@@ -15,6 +15,15 @@ $space-size: (1, 2);
     padding: 0 #{$value}rem;
   }
 }
+$max-width: (3, 4, 5, 6);
+
+@each $value in $max-width {
+  .mw-#{$value} {
+    max-width: #{$value}00px;
+    margin: auto;
+  }
+}
+
 li {
   margin: 0.5rem 0;
 }
@@ -22,5 +31,4 @@ li {
 .position-container {
   max-width: 600px;
   margin: auto;
-  background-color: $bg-color-light;
 }

@@ -2,8 +2,6 @@ button,
 input {
   border: none;
   background-color: transparent;
-  font-family: inherit;
-  padding: 0;
   cursor: pointer;
 }
 .form-container {
@@ -11,18 +9,44 @@ input {
   text-align: center;
 }
 
-form * {
-  font-size: 1.5rem;
-  justify-content: center;
+form {
+  * {
+    font-size: 1.5rem;
+    justify-content: center;
+    padding: 0 0.5rem;
+    margin: 2rem 0 1rem 0;
+  }
+  label {
+    font-family: $title-font;
+    font-size: 1.5rem;
+    color: $subtitle-color;
+  }
+  .btn {
+    font-family: $title-font;
+    color: $input-color;
+    background-color: $btn-color;
+    border-radius: 10rem;
+    padding: 0.5rem 1rem;
+    &:hover {
+      background-color: $btn-hover-color;
+    }
+    &:focus {
+      color: $btn-focus-text;
+      background-color: $btn-focus-color;
+    }
+  }
 }
-.new-item-input,
-.checkbox {
-  background-color: white;
+.text-input {
+  background-color: $input-color;
   border-radius: 10rem;
-  ///CHECK HOW TO CHANGE CHECKBOXES BECAUSE THIS DOESNT CHANGE THEIR BORDER RADIUS OR REMOVE BORDER
+  font-family: $list-font;
+  &:focus {
+    outline: none;
+    border: 2px solid $text-color;
+    color: black;
+    color: $subtitle-color;
+  }
 }
-
-.add-btn {
-  font-family: $subtitle-font;
-  color: $text-color-light;
+.checkbox {
+  ///CHECK HOW TO CHANGE CHECKBOXES BECAUSE THIS DOESNT CHANGE THEIR BORDER RADIUS OR REMOVE BORDER
 }
