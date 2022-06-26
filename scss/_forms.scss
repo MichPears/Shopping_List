@@ -16,17 +16,21 @@ form {
     padding: 0 0.5rem;
     margin: 2rem 0 1rem 0;
   }
-  label {
+
+  .label {
     font-family: $title-font;
     font-size: 1.5rem;
     color: $subtitle-color;
+    &-dark {
+      color: $subtitle-color-dark;
+    }
   }
   .btn {
     font-family: $title-font;
-    color: $input-color;
-    background-color: $btn-color;
     border-radius: 10rem;
     padding: 0.5rem 1rem;
+    color: $input-color;
+    background-color: $btn-color;
     &:hover {
       background-color: $btn-hover-color;
     }
@@ -34,19 +38,37 @@ form {
       color: $btn-focus-text;
       background-color: $btn-focus-color;
     }
+    &-dark {
+      color: $input-color-dark;
+      background-color: $btn-color-dark;
+      &:hover {
+        background-color: $btn-hover-color-dark;
+      }
+      &:focus {
+        color: $btn-focus-text-dark;
+        background-color: $btn-focus-color-dark;
+      }
+    }
+  }
+  .text-input {
+    border-radius: 10rem;
+    font-family: $list-font;
+    background-color: $input-color;
+    &:focus {
+      outline: none;
+      border: 2px solid $text-color;
+      color: $subtitle-color;
+    }
+    &-dark {
+      background-color: $input-color-dark;
+      &:focus {
+        border-color: $text-color-dark;
+        color: $subtitle-color-dark;
+      }
+    }
   }
 }
-.text-input {
-  background-color: $input-color;
-  border-radius: 10rem;
-  font-family: $list-font;
-  &:focus {
-    outline: none;
-    border: 2px solid $text-color;
-    color: black;
-    color: $subtitle-color;
-  }
-}
+
 .checkbox {
   ///CHECK HOW TO CHANGE CHECKBOXES BECAUSE THIS DOESNT CHANGE THEIR BORDER RADIUS OR REMOVE BORDER
 }

@@ -3,32 +3,48 @@
 @import "utilities"; //margins
 @import "forms"; //btns and inputs
 
-body {
+.body {
   background-color: $bg-color;
+  &-dark {
+    background-color: $bg-color-dark;
+  }
 }
 .header-container {
   background-color: $header-color;
+  &-dark {
+    background-color: $header-color-dark;
+  }
 }
 .header {
   display: flex;
   justify-content: space-between;
 }
 
-h1 {
-  color: $title-color;
+.logo {
   font-family: $title-font;
   font-size: 3rem;
+  color: $title-color;
+  &-dark {
+    color: $title-color-dark;
+  }
 }
-h2 {
+.subtitle {
   font-family: $subtitle-font;
   font-size: 2rem;
   border-top: $border-style;
   border-bottom: $border-style;
   color: $subtitle-color;
+  &-dark {
+    color: $subtitle-color-dark;
+    border-color: $header-color-dark;
+  }
 }
 
-a {
+.link {
   font-family: $list-font;
   text-decoration: none;
   color: $text-color;
+  &-dark {
+    color: $text-color-dark;
+  }
 }

@@ -32,7 +32,7 @@ $input-color-dark: lighten($bg-color-dark, 10%);
 $btn-focus-text-dark: lighten($bg-color-dark, 60%);
 $btn-hover-color-dark: lighten($bg-color-dark, 40%);
 
-//generic-assignments
+//default-assignments
 $header-color: $header-color-light;
 $title-color: $title-color-light;
 $subtitle-color: $subtitle-color-light;
@@ -49,10 +49,16 @@ $btn-hover-color: $btn-hover-color-light;
 $border-style: 6px dotted $header-color;
 
 // icons
-.material-symbols-outlined {
+.day-night-btn {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
   color: $icon-color;
+  &:hover {
+    color: $btn-color-dark;
+  }
+  &-dark {
+    color: $btn-hover-color-dark;
+    &:hover {
+      color: $btn-color;
+    }
+  }
 }
-// <span class="material-symbols-outlined">
-// dark_mode
-// </span> ------this is moon icon

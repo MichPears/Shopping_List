@@ -67,11 +67,11 @@
 
     <title>SHOPPING LIST!</title>
   </head>
-  <body>
+  <body class="body">
     <div class="header-container py-2">
       <div class="header mw-6">
-        <h1>Shopping List</h1>
-        <button class="day-night-btn btn">
+        <h1 class="logo">Shopping List</h1>
+        <button class="day-night-btn">
           <span class="material-symbols-outlined"> light_mode </span>
         </button>
       </div>
@@ -79,7 +79,7 @@
     <div class="mw-6">
       <div class="form-container">
         <form action="" class="shopping-form">
-          <label for="new-item-input">Add New:</label>
+          <label for="new-item-input" class="label">Add New:</label>
           <input
             type="text"
             name="new-item-input"
@@ -91,23 +91,23 @@
       </div>
       <div class="lists-container px-1">
         <div class="pending-container my-1">
-          <h2 class="py-1">Pending Items</h2>
+          <h2 class="py-1 subtitle">Pending Items</h2>
           <ul class="pending-ul">
             <li class="pending-li">
               <input type="checkbox" name="check" id="" class="checkbox" />
-              <a href="./item_info.html">bananas</a>
+              <a href="./item_info.html" class="link">bananas</a>
             </li>
             <li class="pending-li">
               <input type="checkbox" name="check" id="" class="checkbox" />
-              <a href="./item_info.html">maybe bananas</a>
+              <a href="./item_info.html" class="link">maybe bananas</a>
             </li>
           </ul>
         </div>
         <div class="in-cart-container my-1">
-          <h2 class="py-1">Shopping Cart</h2>
+          <h2 class="py-1 subtitle">Shopping Cart</h2>
           <ul class="shopping-cart-list">
             <li class="cart-li">
-              <a href="./item_info.html">not bananas</a>
+              <a href="./item_info.html" class="link">not bananas</a>
             </li>
           </ul>
         </div>
