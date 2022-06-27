@@ -178,6 +178,10 @@ input {
   color: #b7a8dd;
 }
 
+.amount-input {
+  max-width: 45px;
+}
+
 .edit-input {
   border-radius: 1.5rem;
   padding: 1rem;

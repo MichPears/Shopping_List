@@ -64,6 +64,9 @@ input {
   border-radius: 10rem;
   @include text-input-style();
 }
+.amount-input {
+  max-width: 45px;
+}
 .edit-input {
   border-radius: 1.5rem;
   padding: 1rem;

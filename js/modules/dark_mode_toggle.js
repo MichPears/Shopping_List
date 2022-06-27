@@ -1,6 +1,6 @@
 const modeBtn = document.querySelector(".day-night-btn");
 const label = document.querySelector(".label");
-const addItemInput = document.querySelector(".text-input");
+const addItemInput = document.querySelectorAll(".text-input");
 const btns = document.querySelectorAll(".btn");
 const bodyBg = document.querySelector(".body");
 const headerBg = document.querySelector(".header-container");
@@ -15,12 +15,14 @@ const toggleGeneral = () => {
   label.classList.toggle("label-dark");
   btns.forEach((btn) => btn.classList.toggle("btn-dark"));
   themeIconBtn.classList.toggle("day-night-btn-dark");
+  addItemInput.forEach((addInput) =>
+    addInput.classList.toggle("text-input-dark")
+  );
 };
 
 const toggleDarkMode = () => {
   toggleGeneral();
   bodyBg.classList.toggle("body-dark");
-  addItemInput.classList.toggle("text-input-dark");
   headerBg.classList.toggle("header-container-dark");
   logo.classList.toggle("logo-dark");
   subtitles.forEach((subtitle) => subtitle.classList.toggle("subtitle-dark"));
@@ -35,6 +37,7 @@ const toggleDarkModeEdit = () => {
   headerBg.classList.toggle("header-container-dark");
   logo.classList.toggle("logo-dark");
 };
+
 let defaultMode = true;
 
 const toggleModeIcon = () => {
