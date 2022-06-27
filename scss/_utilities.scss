@@ -1,5 +1,5 @@
 //margins and stuff?
-$space-size: (1, 2);
+$space-size: (1, 2, 3, 4, 5);
 
 @each $value in $space-size {
   .my-#{$value} {
@@ -15,6 +15,7 @@ $space-size: (1, 2);
     padding: 0 #{$value}rem;
   }
 }
+
 $max-width: (3, 4, 5, 6);
 
 @each $value in $max-width {

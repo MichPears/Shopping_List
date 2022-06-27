@@ -28,10 +28,9 @@
     color: $title-color-dark;
   }
 }
-.subtitle {
+
+@mixin subtitle-style {
   font-family: $subtitle-font;
-  font-size: 2rem;
-  border-top: $border-style;
   border-bottom: $border-style;
   color: $subtitle-color;
   &-dark {
@@ -40,6 +39,15 @@
   }
 }
 
+.subtitle {
+  font-size: 2rem;
+  border-top: $border-style;
+  @include subtitle-style();
+}
+.edit-subtitle {
+  font-size: 3rem;
+  @include subtitle-style();
+}
 .link {
   font-family: $list-font;
   text-decoration: none;

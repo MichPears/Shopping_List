@@ -44,6 +44,54 @@
   padding: 0 2rem;
 }
 
+.my-3 {
+  margin: 3rem 0;
+}
+
+.mx-3 {
+  margin: 0 3rem;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.px-3 {
+  padding: 0 3rem;
+}
+
+.my-4 {
+  margin: 4rem 0;
+}
+
+.mx-4 {
+  margin: 0 4rem;
+}
+
+.py-4 {
+  padding: 4rem 0;
+}
+
+.px-4 {
+  padding: 0 4rem;
+}
+
+.my-5 {
+  margin: 5rem 0;
+}
+
+.mx-5 {
+  margin: 0 5rem;
+}
+
+.py-5 {
+  padding: 5rem 0;
+}
+
+.px-5 {
+  padding: 0 5rem;
+}
+
 .mw-3 {
   max-width: 300px;
   margin: auto;
@@ -84,61 +132,110 @@ input {
   text-align: center;
 }
 
-form * {
+.edit-form * {
+  font-size: 1.5rem;
+}
+.edit-form textarea {
+  max-width: 600px;
+}
+
+.shopping-form * {
   font-size: 1.5rem;
   justify-content: center;
   padding: 0 0.5rem;
   margin: 2rem 0 1rem 0;
 }
-form .label {
+
+.label {
   font-family: "Leckerli One", cursive;
   font-size: 1.5rem;
   color: #1b531b;
 }
-form .label-dark {
+.label-dark {
   color: #6677d1;
 }
-form .btn {
+
+.input-save-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.text-input {
+  border-radius: 10rem;
+  font-family: "Anek Latin", sans-serif;
+  background-color: white;
+}
+.text-input:focus {
+  outline: none;
+  border: 2px solid #cb7100;
+  color: #1b531b;
+}
+.text-input-dark {
+  background-color: #2c1e4e;
+}
+.text-input-dark:focus {
+  border-color: #b7a8dd;
+  color: #b7a8dd;
+}
+
+.edit-input {
+  border-radius: 1.5rem;
+  padding: 1rem;
+  font-family: "Anek Latin", sans-serif;
+  background-color: white;
+}
+.edit-input:focus {
+  outline: none;
+  border: 2px solid #cb7100;
+  color: #1b531b;
+}
+.edit-input-dark {
+  background-color: #2c1e4e;
+}
+.edit-input-dark:focus {
+  border-color: #b7a8dd;
+  color: #b7a8dd;
+}
+
+.btn {
   font-family: "Leckerli One", cursive;
   border-radius: 10rem;
   padding: 0.5rem 1rem;
   color: white;
   background-color: #ffa432;
 }
-form .btn:hover {
+.btn:hover {
   background-color: #fe8d00;
 }
-form .btn:focus {
+.btn:focus {
   color: #ffc67e;
   background-color: #34a034;
 }
-form .btn-dark {
+.btn-dark {
   color: #2c1e4e;
   background-color: #553b97;
 }
-form .btn-dark:hover {
+.btn-dark:hover {
   background-color: #6a4cb9;
 }
-form .btn-dark:focus {
+.btn-dark:focus {
   color: #a795d6;
   background-color: #3f54c5;
 }
-form .text-input {
-  border-radius: 10rem;
-  font-family: "Anek Latin", sans-serif;
-  background-color: white;
+
+.btn-2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.5rem;
 }
-form .text-input:focus {
-  outline: none;
-  border: 2px solid #cb7100;
-  color: #1b531b;
+
+.edit-input {
+  height: 150px;
 }
-form .text-input-dark {
-  background-color: #2c1e4e;
-}
-form .text-input-dark:focus {
-  border-color: #b7a8dd;
-  color: #6677d1;
+
+.bottom-btns {
+  justify-content: center;
+  gap: 1.5rem;
+  display: flex;
 }
 
 .body {
@@ -170,13 +267,24 @@ form .text-input-dark:focus {
 }
 
 .subtitle {
-  font-family: "Barlow Condensed", sans-serif;
   font-size: 2rem;
   border-top: 6px dotted rgb(107, 207, 107);
+  font-family: "Barlow Condensed", sans-serif;
   border-bottom: 6px dotted rgb(107, 207, 107);
   color: #1b531b;
 }
 .subtitle-dark {
+  color: #6677d1;
+  border-color: rgb(25, 34, 82);
+}
+
+.edit-subtitle {
+  font-size: 3rem;
+  font-family: "Barlow Condensed", sans-serif;
+  border-bottom: 6px dotted rgb(107, 207, 107);
+  color: #1b531b;
+}
+.edit-subtitle-dark {
   color: #6677d1;
   border-color: rgb(25, 34, 82);
 }
