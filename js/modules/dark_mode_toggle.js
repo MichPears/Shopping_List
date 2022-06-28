@@ -18,27 +18,27 @@ testBtn.addEventListener("click", () => {
   console.log(darkTheme);
 });
 
-const toggleGeneral = () => {
-  label.classList.toggle("label-dark");
-  btns.forEach((btn) => btn.classList.toggle("btn-dark"));
-  themeIconBtn.classList.toggle("day-night-btn-dark");
-  addItemInput.forEach((addInput) =>
-    addInput.classList.toggle("text-input-dark")
-  );
-  darkTheme = !darkTheme;
-  localStorage.setItem("darkTheme", JSON.stringify(darkTheme));
-  console.log(darkTheme);
-  // location.reload();
-};
+// const toggleGeneral = () => {
+// label.classList.toggle("label-dark");
+// btns.forEach((btn) => btn.classList.toggle("btn-dark"));
+// themeIconBtn.classList.toggle("day-night-btn-dark");
+// addItemInput.forEach((addInput) =>
+// addInput.classList.toggle("text-input-dark")
+// );
+// darkTheme = !darkTheme;
+// localStorage.setItem("darkTheme", JSON.stringify(darkTheme));
+// console.log(darkTheme);
+// location.reload();
+// };
 
-const toggleDarkMode = () => {
-  toggleGeneral();
-  bodyBg.classList.toggle("body-dark");
-  headerBg.classList.toggle("header-container-dark");
-  logo.classList.toggle("logo-dark");
-  subtitles.forEach((subtitle) => subtitle.classList.toggle("subtitle-dark"));
-  links.forEach((link) => link.classList.toggle("link-dark"));
-};
+// const toggleDarkMode = () => {
+// toggleGeneral();
+// bodyBg.classList.toggle("body-dark");
+// headerBg.classList.toggle("header-container-dark");
+// logo.classList.toggle("logo-dark");
+// subtitles.forEach((subtitle) => subtitle.classList.toggle("subtitle-dark"));
+// links.forEach((link) => link.classList.toggle("link-dark"));
+// };
 
 const toggleDarkModeEdit = () => {
   toggleGeneral();
@@ -57,10 +57,4 @@ const toggleModeIcon = () => {
   }
 };
 
-export {
-  toggleDarkMode,
-  toggleDarkModeEdit,
-  toggleModeIcon,
-  modeBtn,
-  darkTheme,
-};
+export { toggleDarkModeEdit, toggleModeIcon, darkTheme };
