@@ -11,6 +11,13 @@ const editSubtitle = document.querySelector(".edit-subtitle");
 const themeIconBtn = document.querySelector(".day-night-btn");
 const editInput = document.querySelector(".edit-input");
 
+let darkTheme = JSON.parse(localStorage.getItem("darkTheme")) || false;
+// localStorage.setItem("darkTheme", JSON.stringify(darkTheme));
+const testBtn = document.querySelector(".test-btn");
+testBtn.addEventListener("click", () => {
+  console.log(darkTheme);
+});
+
 const toggleGeneral = () => {
   label.classList.toggle("label-dark");
   btns.forEach((btn) => btn.classList.toggle("btn-dark"));
@@ -18,6 +25,10 @@ const toggleGeneral = () => {
   addItemInput.forEach((addInput) =>
     addInput.classList.toggle("text-input-dark")
   );
+  darkTheme = !darkTheme;
+  localStorage.setItem("darkTheme", JSON.stringify(darkTheme));
+  console.log(darkTheme);
+  // location.reload();
 };
 
 const toggleDarkMode = () => {
@@ -38,16 +49,18 @@ const toggleDarkModeEdit = () => {
   logo.classList.toggle("logo-dark");
 };
 
-let defaultMode = true;
-
 const toggleModeIcon = () => {
-  if (defaultMode) {
+  if (!darkTheme) {
     modeBtn.innerHTML = `<span class="material-symbols-outlined"> dark_mode </span>`;
-    defaultMode = false;
   } else {
     modeBtn.innerHTML = `<span class="material-symbols-outlined"> light_mode </span>`;
-    defaultMode = true;
   }
 };
 
-export { toggleDarkMode, toggleDarkModeEdit, toggleModeIcon, modeBtn };
+export {
+  toggleDarkMode,
+  toggleDarkModeEdit,
+  toggleModeIcon,
+  modeBtn,
+  darkTheme,
+};

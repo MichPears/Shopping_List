@@ -4,9 +4,9 @@ import {
   toggleModeIcon,
 } from "./modules/dark_mode_toggle.js";
 import {
-  addLiFromLocalStorage,
+  addPendingLiFromLocalStorage,
   addToArrayFromInput,
-  pendingArray,
+  itemArray,
 } from "./modules/addFunctions.js";
 
 //////////////RESET BUTTON FOR TESTING///////////////////
@@ -22,25 +22,26 @@ modeBtn.addEventListener("click", () => {
   toggleDarkMode();
 });
 
+// const pendingLis = document.querySelectorAll(".pending-li");
 /////////////THIS GOES HERE///////////////
-addLiFromLocalStorage();
+addPendingLiFromLocalStorage();
+/////////////////////NEW CODE HERE MAYBE///////////////
+// let pendingLi = addPendingLiFromLocalStorage();
+// let checkbox = document.querySelector(".checkbox");
+// let cartUl = document.querySelector(".shopping-cart-list");
+
+// let itemLink = document.querySelector(".link");
+
+// checkbox.addEventListener("change", () => {
+//   pendingLi.remove();
+// const cartLi = document.createElement("li");
+// cartUl.appendChild(cartLi);
+// console.log(itemLink);
+// cartLi.innerHTML = `${itemLink}`;
+// console.log("you clicked me");
+// });
+
 // console.log(pendingArray);
-
-const checkboxes = document.querySelectorAll(".checkbox");
-const cartUl = document.querySelector(".shopping-cart-list");
-
-const itemLink = document.querySelector(".link");
-
-checkboxes.forEach((checkbox) => {
-  checkbox.addEventListener("change", () => {
-    const cartLi = document.createElement("li");
-    cartUl.appendChild(cartLi);
-    console.log(itemLink);
-    cartLi.innerHTML = `${itemLink}`;
-
-    console.log("you clicked me");
-  });
-});
 
 let addForm = document.querySelector(".shopping-form");
 addForm.addEventListener("submit", (e) => {
