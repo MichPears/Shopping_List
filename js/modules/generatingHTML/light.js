@@ -47,4 +47,4 @@ const loadPage = () => {
 <button class="test-btn">TEST</button>`;
 };
 
-export { loadPage };
+export default loadPage;

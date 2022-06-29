@@ -1,10 +1,3 @@
-// const addItemInput = document.querySelector(".new-item-input");
-// const addAmountInput = document.querySelector(".amount-input");
-// const pendingUl = document.querySelector(".pending-ul");
-// const cartUl = document.querySelector(".shopping-cart-ul");
-
-import { darkTheme } from "./dark_mode_toggle.js";
-
 let itemArray = JSON.parse(localStorage.getItem("itemArray")) || [];
 
 const addToArrayFromInput = (addAmountInput, addItemInput) => {
@@ -19,7 +12,7 @@ const addToArrayFromInput = (addAmountInput, addItemInput) => {
 };
 let id = 0;
 
-const addLiFromLocalStorage = (pendingUl, cartUl) => {
+const addLiFromLocalStorage = (pendingUl, cartUl, darkTheme) => {
   itemArray.forEach((item) => {
     if (!darkTheme) {
       if (item.inCart === false) {
@@ -34,7 +27,6 @@ const addLiFromLocalStorage = (pendingUl, cartUl) => {
           localStorage.setItem("itemArray", JSON.stringify(itemArray));
           location.reload();
         });
-        // return pendingLi;
       } else {
         let cartLi = document.createElement("li");
         cartUl.appendChild(cartLi);
@@ -53,7 +45,6 @@ const addLiFromLocalStorage = (pendingUl, cartUl) => {
           localStorage.setItem("itemArray", JSON.stringify(itemArray));
           location.reload();
         });
-        // return pendingLi;
       } else {
         let cartLi = document.createElement("li");
         cartUl.appendChild(cartLi);

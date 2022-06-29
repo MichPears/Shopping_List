@@ -5,7 +5,7 @@ const loadPageDark = () => {
   body.innerHTML = `<div class="header-container header-container-dark py-2">
   <div class="header mw-6">
     <h1 class="logo logo-dark">Shopping List</h1>
-    <button class="day-night-btn">
+    <button class="day-night-btn day-night-btn-dark">
         <span class="material-symbols-outlined"> dark_mode </span>
     </button>
   </div>
@@ -48,4 +48,4 @@ const loadPageDark = () => {
 <button class="test-btn">TEST</button>`;
 };
 
-export { loadPageDark };
+export default loadPageDark;
