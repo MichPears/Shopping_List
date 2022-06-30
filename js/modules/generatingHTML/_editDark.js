@@ -19,13 +19,15 @@ const loadEditPageDark = (editedItem) => {
         type="number"
         min="1"
         class="text-input amount-input text-input-dark"
-        placeholder="${editedItem.amount}"
+        placeholder=""
+        value="${editedItem.amount}"
       />
       <input
         type="text"
         name="edit-item-input"
         class="text-input edit-item-input text-input-dark"
-        placeholder="${editedItem.item}"
+        placeholder=""
+        value="${editedItem.item}"
       />
       <div class="input-save-container py-2">
         <textarea

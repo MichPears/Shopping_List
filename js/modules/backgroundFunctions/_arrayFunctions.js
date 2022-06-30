@@ -2,6 +2,7 @@ let itemArray = JSON.parse(localStorage.getItem("itemArray")) || [];
 
 itemArray.sort((a, b) => b.id - a.id);
 
+//////////////////////ADD NEW ITEM FROM INPUT//////////////////////////
 const addToArrayFromInput = (addAmountInput, addItemInput) => {
   itemArray.push({
     item: addItemInput.value,
@@ -13,17 +14,20 @@ const addToArrayFromInput = (addAmountInput, addItemInput) => {
   localStorage.setItem("itemArray", JSON.stringify(itemArray));
 };
 
+/////////////////////////////MOVE TO CART//////////////////////////////
 const moveToCart = (item) => {
   item.inCart = true;
   localStorage.setItem("itemArray", JSON.stringify(itemArray));
   location.reload();
 };
 
+////////////////////////////////DELETE/////////////////////////////////
 const deleteItem = (itemArray, editedItem) => {
   itemArray = itemArray.filter((item) => item.id !== editedItem.id);
   localStorage.setItem("itemArray", JSON.stringify(itemArray));
 };
 
+////////////////////////////////EDIT////////////////////////////////////
 const editItem = (
   itemArray,
   editedItem,
@@ -36,23 +40,13 @@ const editItem = (
   editedItem.info = editInfoInput.value;
 
   itemArray = itemArray.filter((item) => item.id !== editedItem.id);
-
   itemArray.push(editedItem);
-
   localStorage.setItem("itemArray", JSON.stringify(itemArray));
-  window.location.href = "../Shopping_List/index.html";
 };
 
-const inputValidation = (addItemInput, addAmountInput) => {
-  if (addItemInput.value === "" || addAmountInput.value === "") {
-    return false;
-  } else {
-    return true;
-  }
-};
-
-const inputEditValidation = (editItemInput, editAmountInput) => {
-  if (editItemInput.value === "" || editAmountInput.value === "") {
+//////////////////////////////VALIDATION////////////////////////////////
+const inputValidation = (itemInput, amountInput) => {
+  if (itemInput.value === "" || amountInput.value === "") {
     return false;
   } else {
     return true;
@@ -65,6 +59,5 @@ export {
   itemArray,
   deleteItem,
   inputValidation,
-  inputEditValidation,
   editItem,
 };

@@ -7,10 +7,11 @@ import {
   addToArrayFromInput,
   itemArray,
   inputValidation,
-} from "./modules/individualFunctions/_arrayFunctions.js";
+} from "./modules/backgroundFunctions/_arrayFunctions.js";
 
-import { addLiFromLocalStorage } from "./modules/_liFunctions.js";
+import { addLiFromLocalStorage } from "./modules/_liEventListeners.js";
 
+////////////////////////LOAD PAGE AND ELEMENTS//////////////////////////
 if (!darkTheme) {
   loadPage();
 } else {
@@ -24,20 +25,21 @@ resetBtn.addEventListener("click", () => {
   location.reload();
 });
 
-///////////////////////MODE BTN////////////////////////
 const modeBtn = document.querySelector(".day-night-btn");
-modeBtn.addEventListener("click", () => {
-  toggleTheme();
-});
-
-/////////////////////NEW CODE HERE MAYBE///////////////
-
 const addItemInput = document.querySelector(".new-item-input");
 const addAmountInput = document.querySelector(".amount-input");
 const pendingUl = document.querySelector(".pending-ul");
 const cartUl = document.querySelector(".shopping-cart-ul");
+
+///////////////////////////////MODE BTN/////////////////////////////////
+modeBtn.addEventListener("click", () => {
+  toggleTheme();
+});
+
+///////////////DISPLAY EXISTING ITEMS FROM LOCAL STORAGE///////////////
 addLiFromLocalStorage(pendingUl, cartUl, darkTheme, itemArray);
 
+//////////////////////ADD NEW ITEM FROM INPUT//////////////////////////
 let addForm = document.querySelector(".shopping-form");
 addForm.addEventListener("submit", (e) => {
   if (inputValidation(addItemInput, addAmountInput)) {

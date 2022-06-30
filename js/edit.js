@@ -5,37 +5,37 @@ import loadEditPageDark from "./modules/generatingHTML/_editDark.js";
 
 import {
   deleteItem,
-  inputEditValidation,
+  inputValidation,
   editItem,
-} from "./modules/individualFunctions/_arrayFunctions.js";
+} from "./modules/backgroundFunctions/_arrayFunctions.js";
 
 let itemArray = JSON.parse(localStorage.getItem("itemArray")) || [];
 let editedItem = JSON.parse(localStorage.getItem("editedItem")) || {};
 
+////////////////////////LOAD PAGE AND ELEMENTS//////////////////////////
 if (!darkTheme) {
   loadEditPage(editedItem);
 } else {
   loadEditPageDark(editedItem);
 }
 
-///////////////////////MODE BTN////////////////////////
 const modeBtn = document.querySelector(".day-night-btn");
+const editForm = document.querySelector(".edit-form");
+const editAmountInput = document.querySelector(".amount-input");
+const editItemInput = document.querySelector(".edit-item-input");
+const editInfoInput = document.querySelector(".edit-input");
+const deleteBtn = document.querySelector(".item-delete-btn");
+const cancelBtn = document.querySelector(".item-cancel-btn");
+
+//////////////////////////////MODE BTN//////////////////////////////////
 modeBtn.addEventListener("click", () => {
   toggleTheme();
 });
 
-let editForm = document.querySelector(".edit-form");
-let editAmountInput = document.querySelector(".amount-input");
-let editItemInput = document.querySelector(".edit-item-input");
-let editInfoInput = document.querySelector(".edit-input");
-let deleteBtn = document.querySelector(".item-delete-btn");
-let cancelBtn = document.querySelector(".item-cancel-btn");
-
+////////////////////////////////EDIT////////////////////////////////////
 editForm.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  if (inputEditValidation(editItemInput, editAmountInput)) {
-    //////////EDIT/////////////
+  if (inputValidation(editItemInput, editAmountInput)) {
     editItem(
       itemArray,
       editedItem,
@@ -43,19 +43,21 @@ editForm.addEventListener("submit", (e) => {
       editItemInput,
       editInfoInput
     );
+    window.location.href = "../Shopping_List/index.html";
   } else {
     e.preventDefault();
     editAmountInput.placeholder = "#";
     editItemInput.placeholder = "please specify item";
-    console.log("oops");
   }
 });
 
+/////////////////////////////DELETE//////////////////////////////////
 deleteBtn.addEventListener("click", () => {
   deleteItem(itemArray, editedItem);
   window.location.href = "../Shopping_List/index.html";
 });
 
+/////////////////////////////CANCEL///////////////////////////////////
 cancelBtn.addEventListener("click", () => {
   window.location.href = "../Shopping_List/index.html";
 });
