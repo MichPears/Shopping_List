@@ -68,7 +68,7 @@
     <title>SHOPPING LIST!</title>
   </head>
   <body class="body">
-    <div class="header-container py-2">
+    <div class="header-container">
       <div class="header mw-6">
         <h1 class="logo">Shopping List</h1>
         <button class="day-night-btn">
@@ -79,29 +79,31 @@
     <div class="mw-6">
       <div class="form-container">
         <form action="" class="shopping-form">
-          <label for="new-item-input" class="label" value="1">Add New:</label>
-          <input
-            type="number"
-            min="1"
-            class="text-input amount-input"
-            placeholder="#"
-          />
-          <input
-            type="text"
-            name="new-item-input"
-            class="text-input new-item-input"
-            placeholder="I need to buy..."
-          />
+          <label for="new-item-input" class="label">Add New:</label>
+          <div class="input-container">
+            <input
+              type="number"
+              min="1"
+              class="text-input amount-input"
+              placeholder="#"
+            />
+            <input
+              type="text"
+              name="new-item-input"
+              class="text-input new-item-input"
+              placeholder="I need to buy..."
+            />
+          </div>
           <input type="submit" class="btn" value="Add" />
         </form>
       </div>
       <div class="lists-container px-1">
         <div class="pending-container my-1">
-          <h2 class="py-1 subtitle">Pending Items</h2>
+          <h2 class="subtitle">Pending Items</h2>
           <ul class="pending-ul"></ul>
         </div>
         <div class="in-cart-container my-1">
-          <h2 class="py-1 subtitle">Shopping Cart</h2>
+          <h2 class="subtitle">Shopping Cart</h2>
           <ul class="shopping-cart-ul">
             <li class="cart-li">
               <a href="./edit.html" class="link">not bananas</a>
@@ -109,9 +111,8 @@
           </ul>
         </div>
       </div>
+      <button class="reset-btn btn">Delete All</button>
     </div>
-    <button class="reset-btn">ERASE LOCAL STORAGE AND RELOAD</button>
-    <!-- <button class="test-btn">TEST</button> -->
     <script src="./js/app.js" type="module"></script>
   </body>
 </html>

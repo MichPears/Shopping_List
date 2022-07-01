@@ -11,10 +11,11 @@ const loadEditPageDark = (editedItem) => {
   </div>
 </div>
 <div class="mw-6">
-  <div class="edit-container">
+  <div class="edit-container px-1">
     <h2 class="edit-subtitle edit-subtitle-dark my-3">${editedItem.amount} ${editedItem.item}</h2>
     <form action="" class="edit-form">
       <label for="item-edit" class="label label-dark">Edit Item:</label>
+      <div class="input-container">
       <input
         type="number"
         min="1"
@@ -28,7 +29,8 @@ const loadEditPageDark = (editedItem) => {
         class="text-input edit-item-input text-input-dark"
         placeholder=""
         value="${editedItem.item}"
-      />
+      />          
+      </div>
       <div class="input-save-container py-2">
         <textarea
           name="item-edit"

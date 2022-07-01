@@ -22,4 +22,24 @@ const addInCart = (cartUl, darkTheme, item) => {
   return cartLi;
 };
 
-export { addPending, addInCart };
+const nothingPending = (pendingUl, darkTheme) => {
+  let noPendingLi = document.createElement("li");
+  pendingUl.appendChild(noPendingLi);
+  if (!darkTheme) {
+    noPendingLi.innerHTML = `<p class="no-items">No pending items</p>`;
+  } else {
+    noPendingLi.innerHTML = `<p class="no-items no-items-dark">No pending items</p>`;
+  }
+};
+
+const nothingInCart = (cartUl, darkTheme) => {
+  let noInCart = document.createElement("li");
+  cartUl.appendChild(noInCart);
+  if (!darkTheme) {
+    noInCart.innerHTML = `<p class="no-items">Nothing in shopping cart</p>`;
+  } else {
+    noInCart.innerHTML = `<p class="no-items no-items-dark">Nothing in shopping cart</p>`;
+  }
+};
+
+export { addPending, addInCart, nothingPending, nothingInCart };

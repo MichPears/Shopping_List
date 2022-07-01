@@ -10,10 +10,11 @@ const loadEditPage = (editedItem) => {
   </div>
 </div>
 <div class="mw-6">
-  <div class="edit-container">
+  <div class="edit-container px-1">
     <h2 class="edit-subtitle my-3">${editedItem.amount} ${editedItem.item}</h2>
     <form action="" class="edit-form">
       <label for="item-edit" class="label">Edit Item:</label>
+      <div class="input-container">
       <input
         type="number"
         min="1"
@@ -25,7 +26,8 @@ const loadEditPage = (editedItem) => {
         name="edit-item-input"
         class="text-input edit-item-input"
         value="${editedItem.item}"
-      />
+      />         
+      </div>
       <div class="input-save-container py-2">
         <textarea
           name="item-edit"

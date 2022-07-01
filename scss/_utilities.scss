@@ -1,19 +1,11 @@
-//margins and stuff?
-$space-size: (1, 2, 3, 4, 5);
-
-@each $value in $space-size {
-  .my-#{$value} {
-    margin: #{$value}rem 0;
-  }
-  .mx-#{$value} {
-    margin: 0 #{$value}rem;
-  }
-  .py-#{$value} {
-    padding: #{$value}rem 0;
-  }
-  .px-#{$value} {
-    padding: 0 #{$value}rem;
-  }
+.my-1 {
+  margin: 1rem 0;
+}
+.mx-1 {
+  margin: 0 1rem;
+}
+.px-1 {
+  padding: 0 1rem;
 }
 
 $max-width: (3, 4, 5, 6);
@@ -26,7 +18,7 @@ $max-width: (3, 4, 5, 6);
 }
 
 li {
-  margin: 0.5rem 0;
+  margin: 0.5rem 1rem;
 }
 
 .position-container {

@@ -10,6 +10,10 @@ import {
 } from "./modules/backgroundFunctions/_arrayFunctions.js";
 
 import { addLiFromLocalStorage } from "./modules/_liEventListeners.js";
+import {
+  nothingInCart,
+  nothingPending,
+} from "./modules/backgroundFunctions/_addLi.js";
 
 ////////////////////////LOAD PAGE AND ELEMENTS//////////////////////////
 if (!darkTheme) {
@@ -38,6 +42,14 @@ modeBtn.addEventListener("click", () => {
 
 ///////////////DISPLAY EXISTING ITEMS FROM LOCAL STORAGE///////////////
 addLiFromLocalStorage(pendingUl, cartUl, darkTheme, itemArray);
+
+if (itemArray.find((item) => item.inCart === false) === undefined) {
+  nothingPending(pendingUl, darkTheme);
+}
+if (itemArray.find((item) => item.inCart === true) === undefined) {
+  nothingInCart(cartUl, darkTheme);
+  console.log("nothing in cart");
+}
 
 //////////////////////ADD NEW ITEM FROM INPUT//////////////////////////
 let addForm = document.querySelector(".shopping-form");

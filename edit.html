@@ -68,7 +68,7 @@
     <title>SHOPPING LIST!</title>
   </head>
   <body class="body">
-    <div class="header-container py-2">
+    <div class="header-container">
       <div class="header mw-6">
         <h1 class="logo">Shopping List</h1>
         <button class="day-night-btn">
@@ -77,23 +77,25 @@
       </div>
     </div>
     <div class="mw-6">
-      <div class="edit-container">
-        <h2 class="edit-subtitle my-3">bananas</h2>
+      <div class="edit-container px-1">
+        <h2 class="edit-subtitle">bananas</h2>
         <form action="" class="edit-form">
           <label for="item-edit" class="label">Edit Item:</label>
-          <input
-            type="number"
-            min="1"
-            class="text-input amount-input"
-            placeholder="#"
-          />
-          <input
-            type="text"
-            name="edit-item-input"
-            class="text-input edit-item-input"
-            placeholder="I need to buy..."
-          />
-          <div class="input-save-container py-2">
+          <div class="input-container">
+            <input
+              type="number"
+              min="1"
+              class="text-input amount-input"
+              placeholder="#"
+            />
+            <input
+              type="text"
+              name="edit-item-input"
+              class="text-input edit-item-input"
+              placeholder="I need to buy..."
+            />
+          </div>
+          <div class="input-save-container">
             <textarea
               name="item-edit"
               cols="50"
