@@ -17,6 +17,7 @@ $text-color-light: darken($bg-color-light, 55%);
 $input-color-light: lighten($bg-color-light, 30%);
 $btn-focus-text-light: darken($bg-color-light, 20%);
 $btn-hover-color-light: darken($btn-color-light, 10%);
+$confirmation-bg-color-light: wheat;
 
 //dark
 $header-color-dark: rgb(25, 34, 82);
@@ -31,6 +32,7 @@ $text-color-dark: lighten($bg-color-dark, 65%);
 $input-color-dark: lighten($bg-color-dark, 10%);
 $btn-focus-text-dark: lighten($bg-color-dark, 60%);
 $btn-hover-color-dark: lighten($bg-color-dark, 40%);
+$confirmation-bg-color-dark: lighten(rgb(23, 16, 50), 5%);
 
 //default-assignments
 $header-color: $header-color-light;
@@ -45,6 +47,7 @@ $text-color: $text-color-light;
 $input-color: $input-color-light;
 $btn-focus-text: $btn-focus-text-light;
 $btn-hover-color: $btn-hover-color-light;
+$confirmation-background: $confirmation-bg-color-light;
 
 $border-style: 6px dotted $header-color;
 

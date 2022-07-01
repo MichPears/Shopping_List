@@ -1,5 +1,5 @@
-@import "config"; //night mode
-@import "utilities"; //margins
+@import "config"; //colors and icons
+@import "utilities"; //margins and padding classes
 @import "forms"; //btns and inputs
 
 .body {
@@ -46,31 +46,32 @@
 @mixin subtitle-style {
   font-family: $subtitle-font;
   border-bottom: $border-style;
+  font-size: 2rem;
+  padding: 0.625rem;
   color: $subtitle-color;
   &-dark {
     color: $subtitle-color-dark;
     border-color: $header-color-dark;
   }
-}
-
-.subtitle {
-  font-size: 2rem;
-  border-top: $border-style;
-  @include subtitle-style();
-  padding: 0.625rem 0;
   @media only screen and (min-width: 600px) {
     padding: 1rem 0;
   }
 }
-.edit-subtitle {
-  font-size: 2rem;
-  margin: 2rem 0;
 
+.subtitle {
+  border-top: $border-style;
+  @include subtitle-style();
+}
+.edit-subtitle {
+  margin: 2rem 0;
   @include subtitle-style();
   @media only screen and (min-width: 600px) {
     margin: 3rem 0;
     font-size: 3rem;
   }
+}
+.confirm-subtitle {
+  @include subtitle-style();
 }
 .link {
   font-family: $list-font;
@@ -91,4 +92,35 @@
   &-dark {
     color: darken(desaturate($text-color-dark, 25%), 40%);
   }
+}
+.delete-confirmation {
+  position: fixed;
+  background-color: $confirmation-background;
+  padding: 2rem;
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  p {
+    padding: 1.5rem 0;
+  }
+  .btn-container {
+    display: flex;
+    gap: 2rem;
+    .btn {
+      font-size: 1.125rem;
+    }
+  }
+  &-dark {
+    background-color: $confirmation-bg-color-dark;
+  }
+}
+.hidden {
+  display: none;
 }

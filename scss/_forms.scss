@@ -62,14 +62,20 @@ input {
   font-family: $list-font;
   background-color: $input-color;
   color: $subtitle-color;
-  &:focus {
+  &:focus,
+  &:-webkit-autofill {
+    -webkit-text-fill-color: $subtitle-color;
+    -webkit-box-shadow: 0 0 0 100px $input-color inset;
     outline: none;
     border: 2px solid $text-color;
   }
   &-dark {
     background-color: $input-color-dark;
     color: $text-color-dark;
-    &:focus {
+    &:focus,
+    &:-webkit-autofill {
+      -webkit-text-fill-color: $subtitle-color-dark;
+      -webkit-box-shadow: 0 0 0 100px $input-color-dark inset;
       border-color: $text-color-dark;
     }
   }

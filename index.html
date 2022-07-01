@@ -104,15 +104,27 @@
         </div>
         <div class="in-cart-container my-1">
           <h2 class="subtitle">Shopping Cart</h2>
-          <ul class="shopping-cart-ul">
-            <li class="cart-li">
-              <a href="./edit.html" class="link">not bananas</a>
-            </li>
-          </ul>
+          <ul class="shopping-cart-ul"></ul>
         </div>
       </div>
       <button class="reset-btn btn">Delete All</button>
+      <div class="delete-confirmation non-empty-confirm hidden">
+        <h2 class="confirm-subtitle">Are you sure?</h2>
+        <p class="link">All items will be permanetly deleted from your list</p>
+        <div class="btn-container">
+          <button class="delete-btn btn">Delete</button>
+          <button class="cancel-confirm-btn btn">Cancel</button>
+        </div>
+      </div>
+      <div class="delete-confirmation empty-confirm hidden">
+        <h2 class="confirm-subtitle">Your list is empty</h2>
+        <p class="link">There are no items in your list</p>
+        <div class="btn-container">
+          <button class="cancel-confirm-btn btn">Ok</button>
+        </div>
+      </div>
     </div>
+
     <script src="./js/app.js" type="module"></script>
   </body>
 </html>

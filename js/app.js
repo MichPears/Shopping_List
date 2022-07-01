@@ -22,18 +22,41 @@ if (!darkTheme) {
   loadPageDark();
 }
 
-////////////RESET BUTTON FOR TESTING///////////////////
-const resetBtn = document.querySelector(".reset-btn");
-resetBtn.addEventListener("click", () => {
-  localStorage.clear();
-  location.reload();
-});
+const deleteAllBtn = document.querySelector(".reset-btn");
+const confirmations = document.querySelectorAll(".delete-confirmation");
+const nonEmptyconfirm = document.querySelector(".non-empty-confirm");
+const emptyConfirm = document.querySelector(".empty-confirm");
 
 const modeBtn = document.querySelector(".day-night-btn");
 const addItemInput = document.querySelector(".new-item-input");
 const addAmountInput = document.querySelector(".amount-input");
 const pendingUl = document.querySelector(".pending-ul");
 const cartUl = document.querySelector(".shopping-cart-ul");
+
+///////////////////////////DELETE ALL BUTTON/////////////////////////////
+deleteAllBtn.addEventListener("click", () => {
+  if (
+    itemArray.find((item) => item.inCart === false) === undefined &&
+    itemArray.find((item) => item.inCart === true) === undefined
+  ) {
+    emptyConfirm.classList.toggle("hidden");
+  } else {
+    nonEmptyconfirm.classList.toggle("hidden");
+  }
+});
+
+confirmations.forEach((confirm) => {
+  confirm.lastElementChild.lastElementChild.addEventListener("click", () => {
+    confirm.classList.toggle("hidden");
+  });
+});
+
+const confirmDeleteAllBtn = document.querySelector(".delete-btn");
+confirmDeleteAllBtn.addEventListener("click", () => {
+  localStorage.setItem("itemArray", JSON.stringify([]));
+  localStorage.setItem("editedItem", JSON.stringify({}));
+  location.reload();
+});
 
 ///////////////////////////////MODE BTN/////////////////////////////////
 modeBtn.addEventListener("click", () => {
@@ -43,13 +66,11 @@ modeBtn.addEventListener("click", () => {
 ///////////////DISPLAY EXISTING ITEMS FROM LOCAL STORAGE///////////////
 addLiFromLocalStorage(pendingUl, cartUl, darkTheme, itemArray);
 
-if (itemArray.find((item) => item.inCart === false) === undefined) {
+if (itemArray.find((item) => item.inCart === false) === undefined)
   nothingPending(pendingUl, darkTheme);
-}
-if (itemArray.find((item) => item.inCart === true) === undefined) {
+
+if (itemArray.find((item) => item.inCart === true) === undefined)
   nothingInCart(cartUl, darkTheme);
-  console.log("nothing in cart");
-}
 
 //////////////////////ADD NEW ITEM FROM INPUT//////////////////////////
 let addForm = document.querySelector(".shopping-form");

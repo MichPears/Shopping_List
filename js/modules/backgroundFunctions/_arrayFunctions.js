@@ -46,7 +46,7 @@ const editItem = (
 
 //////////////////////////////VALIDATION////////////////////////////////
 const inputValidation = (itemInput, amountInput) => {
-  if (itemInput.value === "" || amountInput.value === "") {
+  if (itemInput.value === "") {
     return false;
   } else {
     return true;
