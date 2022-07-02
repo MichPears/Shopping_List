@@ -61,7 +61,7 @@ deleteBtn.addEventListener("click", () =>
 
 confirmDeleteItemBtn.addEventListener("click", () => {
   deleteItem(itemArray, editedItem);
-  window.location.href = "../Shopping_List/index.html";
+  window.location.href = "/";
 });
 
 confirmCancelBtn.addEventListener("click", () =>
@@ -70,5 +70,5 @@ confirmCancelBtn.addEventListener("click", () =>
 
 /////////////////////////////CANCEL///////////////////////////////////
 cancelBtn.addEventListener("click", () => {
-  window.location.href = "../Shopping_List/index.html";
+  window.location.href = "/";
 });
