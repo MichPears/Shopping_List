@@ -46,7 +46,7 @@ editForm.addEventListener("submit", (e) => {
       editItemInput,
       editInfoInput
     );
-    window.location.href = "../Shopping_List/index.html";
+    window.location.href = "/";
   } else {
     e.preventDefault();
     editAmountInput.placeholder = "#";
