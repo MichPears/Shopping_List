@@ -23,10 +23,10 @@ if (!darkTheme) {
 }
 
 const deleteAllBtn = document.querySelector(".reset-btn");
-const confirmations = document.querySelectorAll(".delete-confirmation");
+const confirmationSigns = document.querySelectorAll(".delete-confirmation");
 const nonEmptyconfirm = document.querySelector(".non-empty-confirm");
 const emptyConfirm = document.querySelector(".empty-confirm");
-
+const confirmDeleteAllBtn = document.querySelector(".delete-btn");
 const modeBtn = document.querySelector(".day-night-btn");
 const addItemInput = document.querySelector(".new-item-input");
 const addAmountInput = document.querySelector(".amount-input");
@@ -45,13 +45,12 @@ deleteAllBtn.addEventListener("click", () => {
   }
 });
 
-confirmations.forEach((confirm) => {
+confirmationSigns.forEach((confirm) => {
   confirm.lastElementChild.lastElementChild.addEventListener("click", () => {
     confirm.classList.toggle("hidden");
   });
 });
 
-const confirmDeleteAllBtn = document.querySelector(".delete-btn");
 confirmDeleteAllBtn.addEventListener("click", () => {
   localStorage.setItem("itemArray", JSON.stringify([]));
   localStorage.setItem("editedItem", JSON.stringify({}));

@@ -26,6 +26,9 @@ const editItemInput = document.querySelector(".edit-item-input");
 const editInfoInput = document.querySelector(".edit-input");
 const deleteBtn = document.querySelector(".item-delete-btn");
 const cancelBtn = document.querySelector(".item-cancel-btn");
+const confirmationSign = document.querySelector(".item-confirm");
+const confirmDeleteItemBtn = document.querySelector(".delete-btn");
+const confirmCancelBtn = document.querySelector(".cancel-confirm-btn");
 
 //////////////////////////////MODE BTN//////////////////////////////////
 modeBtn.addEventListener("click", () => {
@@ -52,10 +55,18 @@ editForm.addEventListener("submit", (e) => {
 });
 
 /////////////////////////////DELETE//////////////////////////////////
-deleteBtn.addEventListener("click", () => {
+deleteBtn.addEventListener("click", () =>
+  confirmationSign.classList.toggle("hidden")
+);
+
+confirmDeleteItemBtn.addEventListener("click", () => {
   deleteItem(itemArray, editedItem);
   window.location.href = "../Shopping_List/index.html";
 });
+
+confirmCancelBtn.addEventListener("click", () =>
+  confirmationSign.classList.toggle("hidden")
+);
 
 /////////////////////////////CANCEL///////////////////////////////////
 cancelBtn.addEventListener("click", () => {

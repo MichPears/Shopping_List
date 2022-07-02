@@ -52,6 +52,10 @@ $confirmation-background: $confirmation-bg-color-light;
 $border-style: 6px dotted $header-color;
 
 // icons
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
 .day-night-btn {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
   color: $icon-color;
@@ -66,6 +70,23 @@ $border-style: 6px dotted $header-color;
   }
 }
 
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+@mixin confirm-icon {
+  font-size: 2.25rem;
+  color: $subtitle-color;
+  &-dark {
+    color: $subtitle-color-dark;
+  }
+}
+
+.cancel-icon {
+  @include confirm-icon();
+  &:hover {
+    color: rgb(255, 84, 31);
+  }
+}
+.delete-icon {
+  @include confirm-icon();
+  &:hover {
+    color: $header-color;
+  }
 }

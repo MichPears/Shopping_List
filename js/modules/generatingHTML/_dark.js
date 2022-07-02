@@ -46,8 +46,12 @@ const loadPageDark = () => {
     <h2 class="confirm-subtitle confirm-subtitle-dark">Are you sure?</h2>
     <p class="link link-dark">All items will be permanetly deleted from your list</p>
     <div class="btn-container">
-      <button class="delete-btn btn btn-dark">Delete</button>
-      <button class="cancel-confirm-btn btn btn-dark">Cancel</button>
+      <button class="delete-btn">
+        <span class="material-symbols-outlined delete-icon delete-icon-dark"> check </span>
+      </button>
+      <button class="cancel-confirm-btn">
+        <span class="material-symbols-outlined cancel-icon cancel-icon-dark"> close </span>
+      </button>
     </div>
   </div>
   <div class="delete-confirmation delete-confirmation-dark empty-confirm hidden">

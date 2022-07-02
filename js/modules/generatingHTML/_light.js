@@ -45,8 +45,12 @@ const loadPage = () => {
     <h2 class="confirm-subtitle">Are you sure?</h2>
     <p class="link">All items will be permanetly deleted from your list</p>
     <div class="btn-container">
-      <button class="delete-btn btn">Delete</button>
-      <button class="cancel-confirm-btn btn">Cancel</button>
+      <button class="delete-btn">
+        <span class="material-symbols-outlined delete-icon"> check </span>
+      </button>
+      <button class="cancel-confirm-btn">
+        <span class="material-symbols-outlined cancel-icon"> close </span>
+      </button>
     </div>
   </div>
   <div class="delete-confirmation empty-confirm hidden">
