@@ -21,7 +21,6 @@ const addLiFromLocalStorage = (pendingUl, cartUl, darkTheme, itemArray) => {
     } else {
       //////////////////////CREATE LI IN CART///////////////////////////
       let cartLi = addInCart(cartUl, darkTheme, item);
-
       let link = cartLi.firstElementChild;
 
       ////////////////////SET ITEM TO BE EDITED/////////////////////////

@@ -74,11 +74,10 @@ if (itemArray.find((item) => item.inCart === true) === undefined)
 //////////////////////ADD NEW ITEM FROM INPUT//////////////////////////
 let addForm = document.querySelector(".shopping-form");
 addForm.addEventListener("submit", (e) => {
-  if (inputValidation(addItemInput, addAmountInput)) {
+  if (inputValidation(addItemInput)) {
     addToArrayFromInput(addAmountInput, addItemInput, itemArray);
     location.reload();
   } else {
     e.preventDefault();
-    console.log("oops");
   }
 });

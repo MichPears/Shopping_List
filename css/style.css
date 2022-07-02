@@ -50,24 +50,6 @@
   padding: 0 1rem;
 }
 
-.mw-3 {
-  max-width: 300px;
-  margin: auto;
-  box-sizing: border-box;
-}
-
-.mw-4 {
-  max-width: 400px;
-  margin: auto;
-  box-sizing: border-box;
-}
-
-.mw-5 {
-  max-width: 500px;
-  margin: auto;
-  box-sizing: border-box;
-}
-
 .mw-6 {
   max-width: 600px;
   margin: auto;
@@ -76,11 +58,6 @@
 
 li {
   margin: 0.5rem 1rem;
-}
-
-.position-container {
-  max-width: 600px;
-  margin: auto;
 }
 
 button,
@@ -168,6 +145,7 @@ input {
 .text-input:focus, .text-input:-webkit-autofill {
   -webkit-text-fill-color: #1b531b;
   -webkit-box-shadow: 0 0 0 100px white inset;
+  box-shadow: 0 0 0 100px white inset;
   outline: none;
   border: 2px solid #cb7100;
 }
@@ -178,6 +156,7 @@ input {
 .text-input-dark:focus, .text-input-dark:-webkit-autofill {
   -webkit-text-fill-color: #6677d1;
   -webkit-box-shadow: 0 0 0 100px #2c1e4e inset;
+  box-shadow: 0 0 0 100px #2c1e4e inset;
   border-color: #b7a8dd;
 }
 @media only screen and (min-width: 600px) {
@@ -200,6 +179,7 @@ input {
 .edit-input:focus, .edit-input:-webkit-autofill {
   -webkit-text-fill-color: #1b531b;
   -webkit-box-shadow: 0 0 0 100px white inset;
+  box-shadow: 0 0 0 100px white inset;
   outline: none;
   border: 2px solid #cb7100;
 }
@@ -210,6 +190,7 @@ input {
 .edit-input-dark:focus, .edit-input-dark:-webkit-autofill {
   -webkit-text-fill-color: #6677d1;
   -webkit-box-shadow: 0 0 0 100px #2c1e4e inset;
+  box-shadow: 0 0 0 100px #2c1e4e inset;
   border-color: #b7a8dd;
 }
 

@@ -73,6 +73,7 @@ input {
   &:-webkit-autofill {
     -webkit-text-fill-color: $subtitle-color;
     -webkit-box-shadow: 0 0 0 100px $input-color inset;
+    box-shadow: 0 0 0 100px $input-color inset;
     outline: none;
     border: 2px solid $text-color;
   }
@@ -83,6 +84,7 @@ input {
     &:-webkit-autofill {
       -webkit-text-fill-color: $subtitle-color-dark;
       -webkit-box-shadow: 0 0 0 100px $input-color-dark inset;
+      box-shadow: 0 0 0 100px $input-color-dark inset;
       border-color: $text-color-dark;
     }
   }
@@ -157,7 +159,3 @@ input {
     font-size: 1.125rem;
   }
 }
-
-// .checkbox {
-//   ///CHECK HOW TO CHANGE CHECKBOXES BECAUSE THIS DOESNT CHANGE THEIR BORDER RADIUS OR REMOVE BORDER
-// }
